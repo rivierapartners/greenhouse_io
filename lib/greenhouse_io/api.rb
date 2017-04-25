@@ -12,8 +12,8 @@ module GreenhouseIo
       JSON.parse(response.body, symbolize_names: GreenhouseIo.configuration.symbolize_keys)
     end
 
-    def basic_auth
-      { :username => self.api_token }
+    def api_auth_header
+      { "Authorization" => "Bearer #{self.api_token}" }
     end
   end
 end
