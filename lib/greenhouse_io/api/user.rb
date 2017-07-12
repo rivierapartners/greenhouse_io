@@ -48,9 +48,9 @@ module GreenhouseIo
       if response.code == 200
         parse_json(response)
       else
-        raise GreenhouseIo::Error.new(response.code)
+        errorStr = response["errors"].map { |err| err["message"] }.join(", ")
+        raise GreenhouseIo::Error.new(errorStr, response.code)
       end
     end
   end
 end
-
