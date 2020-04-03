@@ -19,3 +19,4 @@ tmp
 .tags
 .idea/
 .DS_STORE
+.tool-versions
