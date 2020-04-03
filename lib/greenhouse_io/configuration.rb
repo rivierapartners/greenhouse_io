@@ -1,6 +1,6 @@
 module GreenhouseIo
   class Configuration
-    attr_accessor :symbolize_keys, :organization
+    attr_accessor :symbolize_keys, :organization, :api_token
 
     def initialize
       @symbolize_keys = false
